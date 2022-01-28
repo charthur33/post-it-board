@@ -25,7 +25,7 @@ mongoose.connect(
 );
 
 app.use("/users", require("./routes/users"));
-app.use("/notes", require("./routes/notes"));
+//app.use("/notes", require("./routes/notes"));
 
 
 // app.listen(port, () => {
