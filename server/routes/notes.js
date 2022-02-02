@@ -1,6 +1,10 @@
 const express = require("express");
 const router = require("express").Router();
 const Note = require("../models/note.model");
+const auth = require("../middleware/auth");
+//const bodyParser = require("body-parser");
+
+
 
 //add note
 router.post("/add-note", async (req, res) => {
@@ -21,19 +25,22 @@ router.post("/add-note", async (req, res) => {
 });
 
 //Get all notes that match userID
-router.get("/", async (req, res) => {
+router.get("/get-notes", async (req, res) => {
     try {
-        const notes = await Note.find({ userID: req.userID });
+        const { userID } = req.query;
+        const notes = await Note.find({userID: userID});
         res.json(notes);
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        //res.status(500).json({ error: err.message });
+        console.log(err);
     }
 });
 
 //delete note
 router.delete("/delete-note", async (req, res) => {
     try {
-        const deletedNote = await Note.findByIdAndDelete(req.note);
+        const { noteID } = req.query;
+        const deletedNote = await Note.findByIdAndDelete(noteID);
         res.json(deletedNote);
     } catch (err) {
         res.status(500).json({ error: err.message });
