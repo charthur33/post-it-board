@@ -219,7 +219,7 @@
 
   .access-page h3 {
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 300;
     padding-bottom: 1%;
   }
 
@@ -293,7 +293,7 @@
   }
 
   .postit-img1 {
-    top: 45%;
+    top: 50%;
     left: 20px;
   }
 
@@ -308,7 +308,7 @@
   }
 
   .postit-img3 {
-    top: 45%;
+    top: 50%;
     right: 20px;
   }
 
