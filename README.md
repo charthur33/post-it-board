@@ -1,4 +1,4 @@
-# Personal Post-it Note Board
+# Personal 'Post-it' Note Board
   ## Description
   This application is a personal 'post-it' note board developed using the MERN stack.
   ## Technologies Used
