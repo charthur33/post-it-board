@@ -31,7 +31,6 @@ router.get("/get-notes", async (req, res) => {
         const notes = await Note.find({userID: userID});
         res.json(notes);
     } catch (err) {
-        //res.status(500).json({ error: err.message });
         console.log(err);
     }
 });

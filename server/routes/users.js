@@ -94,12 +94,6 @@ router.post("/tokenIsValid", async (req, res) => {
     }
 });
 
-//Add new note/update a users notes
-// router.post("/", async (req, res) => {
-//     try {
-//         const { noteTitle, noteContent,  } = req.body;
-//     }
-// });
 
 router.get("/", auth, async (req, res) => {
     const user = await User.findById(req.user);
