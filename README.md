@@ -25,10 +25,10 @@
   - [Questions](#questions)
   - [License](#license)
   ## Installation
-  clone the repository, run `npm install` from the root directory
+  clone the repository, run `npm install` in both the root directory and client/ directory
   ## Usage
-      cd sever
-      npm run dev
+      cd into root directory
+      run 'npm run dev' to run the application on a development server
   ## Testing
       npm test
   ## Contributing
