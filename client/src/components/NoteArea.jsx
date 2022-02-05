@@ -25,7 +25,7 @@ function NoteArea(props) {
                 displayStyle: rotation,
                 userID: userIDString
             };
-            await axios.post("http://localhost:5000/notes/add-note", newNote);
+            await axios.post("notes/add-note", newNote);
             getUserNotes();
         } catch (err) {
             console.log(err);
@@ -36,7 +36,7 @@ function NoteArea(props) {
     async function getUserNotes() {
         let userNoteID = userIDString;
         try {
-            const notes = await axios.get("http://localhost:5000/notes/get-notes?userID=" + userNoteID);
+            const notes = await axios.get("notes/get-notes?userID=" + userNoteID);
             var userNotes = notes.data;
             setNewNote(userNotes);
         } catch (err) {
@@ -47,7 +47,7 @@ function NoteArea(props) {
     async function deleteNote(id) {
         let noteToDelete = allNotes[id];
         try {
-            await axios.delete("http://localhost:5000/notes/delete-note?noteID=" + noteToDelete._id);
+            await axios.delete("notes/delete-note?noteID=" + noteToDelete._id);
             setNewNote((prevNotes) => {
                 return prevNotes.filter((note, index) => {
                     return index !== id;

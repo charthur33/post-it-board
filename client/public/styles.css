@@ -39,22 +39,19 @@
   
   header h1 {
     color: #fff;
-    font-family: "McLaren", cursive;
-    font-weight: 200;
+    font-weight: 400;
     align-self: center;
   }
 
   header h2 {
     color: #fff;
-    font-family: "McLaren", cursive;
-    font-weight: 200;
+    font-weight: 300;
     align-self: center;
     margin-left: auto;
   }
 
   header h3 {
     color: #fff;
-    font-family: "McLaren", cursive;
     font-weight: 200;
     font-size: 2rem;
     align-self: center;
